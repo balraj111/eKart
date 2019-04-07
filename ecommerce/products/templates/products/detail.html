@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<b>{{object.title}}</b> <br>
+
+{{object.description}}<br>
+
+{% if object.image %}
+    <img src='{{object.image.url}}' class="img-fluid"/>
+{% endif %}
+
+</body>
+</html>
