@@ -1,18 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base.html" %}
 
-<b>{{object.title}}</b> <br>
 
-{{object.description}}<br>
+{% block content %}
 
-{% if object.image %}
-    <img src='{{object.image.url}}' class="img-fluid"/>
-{% endif %}
 
-</body>
-</html>
+    <div class='row'>
+        <div class='col'>
+    <h1>{{ object.title }}</h1>
+    {{ object.timestamp|timesince }} ago
+    {{ object.description|linebreaks }}<br/>
+    {% if object.image %}
+        <img src='{{ object.image.url }}' class='img-fluid' />
+    {% endif %}
+</div>
+</div>
+
+
+{% endblock %}
