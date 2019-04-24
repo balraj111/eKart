@@ -5,6 +5,7 @@ from django.shortcuts import render
 from .forms import ContactForm,RegisterForm
 
 
+
 def home_page(request):
     contact=ContactForm(request.POST or None)
     context={
